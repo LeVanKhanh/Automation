@@ -39,11 +39,15 @@ namespace Selenium.Controllers
         [HttpPost]
         public IActionResult Login(LoginViewModel loginViewModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                return View("Error", new ErrorViewModel());
+            }
+            if (loginViewModel.Name == "guest" && loginViewModel.Password == "guest")
             {
                 return RedirectToAction("Index");
             }
-            return View(loginViewModel);
+            return View("Error", new ErrorViewModel());
         }
     }
 }
