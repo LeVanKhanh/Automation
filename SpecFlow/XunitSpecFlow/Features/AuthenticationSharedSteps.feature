@@ -30,14 +30,14 @@ Scenario: Input the right usename and password with account superadministrator
 	Then SharedSteps the IsAuthenticated should be true
 
 Scenario: The username is empty
-	Given SharedSteps the username is null
+	Given SharedSteps the username is ToEmptyString
 	And SharedSteps the password is admin
 	When SharedSteps trigger login
 	Then SharedSteps the Message should be The username and password are requied!
 
 Scenario: The password is empty
 	Given SharedSteps the username is admin
-	And SharedSteps the password is null
+	And SharedSteps the password is ToEmptyString
 	When SharedSteps trigger login
 	Then SharedSteps the Message should be The username and password are requied!
 
@@ -52,3 +52,6 @@ Scenario: The password is wrong
 	And SharedSteps the password is admim
 	When SharedSteps trigger login
 	Then SharedSteps the Message should be The username or password is incorrect!
+
+Scenario Outline: Tets
+	Given Sleep 3 days ago

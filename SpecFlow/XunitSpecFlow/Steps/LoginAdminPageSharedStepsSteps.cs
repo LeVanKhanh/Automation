@@ -18,7 +18,7 @@ namespace XunitSpecFlow.Steps
         {
             _authenticationProvider.Username = username;
         }
-        
+
         [Given(@"SharedSteps the password is (.*)")]
         public void GivenSharedStepsThePasswordIs_PO(string password)
         {
@@ -42,5 +42,12 @@ namespace XunitSpecFlow.Steps
         {
             Assert.Equal(message, _authenticationProvider.Message);
         }
+
+        [Given(@"Sleep (.* days ago)")]
+        public void GivenSleepDaysAgo(string p0)
+        {
+            
+        }
+
     }
 }

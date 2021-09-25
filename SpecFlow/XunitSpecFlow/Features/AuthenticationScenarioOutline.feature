@@ -25,10 +25,10 @@ Scenario Outline: Authentication failed
 	Then ScenarioOutline the Message should be <message>
 
 	Examples:
-		| username | password | message                                |
-		| null     | admin    | The username and password are requied! |
-		| admin    | null     | The username and password are requied! |
-		|          | admin    | The username and password are requied! |
-		| admin    |          | The username and password are requied! |
-		| admim    | admin    | The username or password is incorrect! |
-		| admin    | admim    | The username or password is incorrect! |
+		| username     | password     | message                                |
+		| ToNullString | admin        | The username and password are requied! |
+		| admin        | ToNullString | The username and password are requied! |
+		|              | admin        | The username and password are requied! |
+		| admin        |              | The username and password are requied! |
+		| admim        | admin        | The username or password is incorrect! |
+		| admin        | admim        | The username or password is incorrect! |

@@ -5,7 +5,7 @@
 	“As a [persona], I [want to], [so that].”
 	As a application administrator, I want to login to admin page, so that I can manage the application settings
 
-Background: 
+Background:
 	Given I access the authentication page
 
 Scenario Outline: Authentication successful
@@ -28,10 +28,10 @@ Scenario Outline: Authentication failed
 	Then Background the Message should be <message>
 
 	Examples:
-		| username | password | message                                |
-		| null     | admin    | The username and password are requied! |
-		| admin    | null     | The username and password are requied! |
-		|          | admin    | The username and password are requied! |
-		| admin    |          | The username and password are requied! |
-		| admim    | admin    | The username or password is incorrect! |
-		| admin    | admim    | The username or password is incorrect! |
+		| username     | password     | message                                |
+		| ToNullString | admin        | The username and password are requied! |
+		| admin        | ToNullString | The username and password are requied! |
+		|              | admin        | The username and password are requied! |
+		| admin        |              | The username and password are requied! |
+		| admim        | admin        | The username or password is incorrect! |
+		| admin        | admim        | The username or password is incorrect! |
