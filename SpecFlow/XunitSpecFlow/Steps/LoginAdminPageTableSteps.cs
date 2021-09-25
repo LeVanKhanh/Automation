@@ -1,8 +1,9 @@
 ﻿using Authentication;
-using System;
 using System.Linq;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using Xunit;
+using XunitSpecFlow.Arguments;
 
 namespace XunitSpecFlow.Steps
 {
@@ -15,6 +16,10 @@ namespace XunitSpecFlow.Steps
             _authenticationProvider = new AuthenticationProvider();
         }
 
+        /// <summary>
+        /// Normal
+        /// </summary>
+        /// <param name="table"></param>
         [Given(@"Table I have successful authentication with correct account")]
         public void GivenIHaveSuccessfulAuthenticationWithCorrectAccount(Table table)
         {
@@ -22,18 +27,28 @@ namespace XunitSpecFlow.Steps
             _authenticationProvider.Password = table.Rows.First(r => r["attribute"] == "password")["value"];
         }
 
+        /// Dynamic
+        /// </summary>
+        /// <param name="table"></param>
         [Given(@"Table I have failed authentication with incorrect account")]
         public void GivenIHaveFailedAuthenticationWithIncorrectAccount(Table table)
         {
-            _authenticationProvider.Username = table.Rows.First(r => r["attribute"] == "username")["value"];
-            _authenticationProvider.Password = table.Rows.First(r => r["attribute"] == "password")["value"];
+            dynamic account = table.CreateDynamicInstance();
+            _authenticationProvider.Username = account.username;
+            _authenticationProvider.Password = account.password;
         }
 
+        /// <summary>
+        /// Strongly-typed
+        /// </summary>
+        /// <param name="table"></param>
+        /// <summary>
         [Given(@"Table I have failed authentication with missing input")]
         public void GivenIHaveFailedAuthenticationWithMissingInput(Table table)
         {
-            _authenticationProvider.Username = table.Rows.First(r => r["attribute"] == "username")["value"];
-            _authenticationProvider.Password = table.Rows.First(r => r["attribute"] == "password")["value"];
+            var account = table.CreateInstance<Account>();
+            _authenticationProvider.Username = account.Username;
+            _authenticationProvider.Password = account.Password;
         }
 
         [When(@"Table trigger login")]
