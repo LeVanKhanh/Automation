@@ -42,12 +42,5 @@ namespace XunitSpecFlow.Steps
         {
             Assert.Equal(message, _authenticationProvider.Message);
         }
-
-        [Given(@"Sleep (.* days ago)")]
-        public void GivenSleepDaysAgo(string p0)
-        {
-            
-        }
-
     }
 }

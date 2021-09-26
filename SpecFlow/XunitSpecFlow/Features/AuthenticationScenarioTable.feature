@@ -5,6 +5,7 @@
 	“As a [persona], I [want to], [so that].”
 	As a application administrator, I want to login to admin page, so that I can manage the application settings
 
+@AuthenticationSuccessful
 Scenario Outline: Authentication successful
 	Given Table I have successful authentication with correct account
 		| attribute | value |
@@ -13,6 +14,7 @@ Scenario Outline: Authentication successful
 	When Table trigger login
 	Then Table the IsAuthenticated should be true
 
+@AuthenticationFailed
 Scenario Outline:  Authentication failed with incorrect account
 	Given Table I have failed authentication with incorrect account
 		| attribute | value |
@@ -21,6 +23,7 @@ Scenario Outline:  Authentication failed with incorrect account
 	When Table trigger login
 	Then Table the Message should be The username or password is incorrect!
 
+@AuthenticationFailed
 Scenario Outline: Authentication failed with missing input
 	Given Table I have failed authentication with missing input
 		| attribute | value |

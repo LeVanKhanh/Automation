@@ -86,12 +86,14 @@ namespace XunitSpecFlow.Features
         [Xunit.SkippableFactAttribute(DisplayName="Input the right usename and password with account admin")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "Input the right usename and password with account admin")]
+        [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         public virtual void InputTheRightUsenameAndPasswordWithAccountAdmin()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationSuccessful"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input the right usename and password with account admin", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -111,16 +113,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
+#line 10
  testRunner.Given("SharedSteps the username is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 10
+#line 11
  testRunner.And("SharedSteps the password is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
+#line 12
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 12
+#line 13
  testRunner.Then("SharedSteps the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -130,12 +132,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Input the right usename and password with account administrator")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "Input the right usename and password with account administrator")]
+        [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         public virtual void InputTheRightUsenameAndPasswordWithAccountAdministrator()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationSuccessful"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input the right usename and password with account administrator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 14
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -155,16 +159,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 15
+#line 17
  testRunner.Given("SharedSteps the username is administrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 16
+#line 18
  testRunner.And("SharedSteps the password is administrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 19
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 20
  testRunner.Then("SharedSteps the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -174,12 +178,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Input the right usename and password with account superadmin")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "Input the right usename and password with account superadmin")]
+        [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         public virtual void InputTheRightUsenameAndPasswordWithAccountSuperadmin()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationSuccessful"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input the right usename and password with account superadmin", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -199,16 +205,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
+#line 24
  testRunner.Given("SharedSteps the username is superadmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 25
  testRunner.And("SharedSteps the password is superadmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 26
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 27
  testRunner.Then("SharedSteps the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -218,12 +224,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Input the right usename and password with account superadministrator")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "Input the right usename and password with account superadministrator")]
+        [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         public virtual void InputTheRightUsenameAndPasswordWithAccountSuperadministrator()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationSuccessful"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input the right usename and password with account superadministrator", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 26
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -243,16 +251,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 27
+#line 31
  testRunner.Given("SharedSteps the username is superadministrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 28
+#line 32
  testRunner.And("SharedSteps the password is superadministrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 33
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 30
+#line 34
  testRunner.Then("SharedSteps the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -262,12 +270,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="The username is empty")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "The username is empty")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         public virtual void TheUsernameIsEmpty()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The username is empty", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -287,16 +297,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 33
+#line 38
  testRunner.Given("SharedSteps the username is ToEmptyString", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 34
+#line 39
  testRunner.And("SharedSteps the password is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 40
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 36
+#line 41
  testRunner.Then("SharedSteps the Message should be The username and password are requied!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -306,55 +316,13 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="The password is empty")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "The password is empty")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         public virtual void ThePasswordIsEmpty()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The password is empty", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 39
- testRunner.Given("SharedSteps the username is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 40
- testRunner.And("SharedSteps the password is ToEmptyString", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 41
- testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 42
- testRunner.Then("SharedSteps the Message should be The username and password are requied!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="The username is wrong")]
-        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
-        [Xunit.TraitAttribute("Description", "The username is wrong")]
-        public virtual void TheUsernameIsWrong()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The username is wrong", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -376,15 +344,61 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 45
- testRunner.Given("SharedSteps the username is admim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("SharedSteps the username is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 46
- testRunner.And("SharedSteps the password is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("SharedSteps the password is ToEmptyString", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 47
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 48
+ testRunner.Then("SharedSteps the Message should be The username and password are requied!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="The username is wrong")]
+        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
+        [Xunit.TraitAttribute("Description", "The username is wrong")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
+        public virtual void TheUsernameIsWrong()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The username is wrong", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 51
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 52
+ testRunner.Given("SharedSteps the username is admim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 53
+ testRunner.And("SharedSteps the password is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 54
+ testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 55
  testRunner.Then("SharedSteps the Message should be The username or password is incorrect!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -394,12 +408,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="The password is wrong")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
         [Xunit.TraitAttribute("Description", "The password is wrong")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         public virtual void ThePasswordIsWrong()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The password is wrong", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 50
+#line 58
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -419,52 +435,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 51
+#line 59
  testRunner.Given("SharedSteps the username is admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 52
+#line 60
  testRunner.And("SharedSteps the password is admim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 61
  testRunner.When("SharedSteps trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 62
  testRunner.Then("SharedSteps the Message should be The username or password is incorrect!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Tets")]
-        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(SharedSteps)")]
-        [Xunit.TraitAttribute("Description", "Tets")]
-        public virtual void Tets()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tets", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 56
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 57
- testRunner.Given("Sleep 3 days ago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }
             this.ScenarioCleanup();

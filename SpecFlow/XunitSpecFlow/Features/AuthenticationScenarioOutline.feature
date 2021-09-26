@@ -5,6 +5,7 @@
 	“As a [persona], I [want to], [so that].”
 	As a application administrator, I want to login to admin page, so that I can manage the application settings
 
+@AuthenticationSuccessful
 Scenario Outline: Authentication successful
 	Given ScenarioOutline the username is <username>
 	And ScenarioOutline the password is <password>
@@ -18,6 +19,7 @@ Scenario Outline: Authentication successful
 		| superadmin         | superadmin         |
 		| superadministrator | superadministrator |
 
+@AuthenticationFailed
 Scenario Outline: Authentication failed
 	Given ScenarioOutline the username is <username>
 	And ScenarioOutline the password is <password>

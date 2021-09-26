@@ -1,4 +1,4 @@
-﻿Feature: Login Admin Page(Background)
+﻿Feature: Login Admin Page(StepsContext)
 	Who: Application administrator
 	What: Login to admin page
 	Why: To mange application settings
@@ -6,14 +6,14 @@
 	As a application administrator, I want to login to admin page, so that I can manage the application settings
 
 Background:
-	Given Background I access the authentication page
+	Given I access the authentication page
 
 @AuthenticationSuccessful
 Scenario Outline: Authentication successful
-	And Background the username is <username>
-	And Background the password is <password>
-	When Background trigger login
-	Then Background the IsAuthenticated should be true
+	And StepsContext the username is <username>
+	And StepsContext the password is <password>
+	When StepsContext trigger login
+	Then StepsContext the IsAuthenticated should be true
 
 	Examples:
 		| username           | password           |
@@ -24,10 +24,10 @@ Scenario Outline: Authentication successful
 
 @AuthenticationFailed
 Scenario Outline: Authentication failed
-	And Background the username is <username>
-	And Background the password is <password>
-	When Background trigger login
-	Then Background the Message should be <message>
+	And StepsContext the username is <username>
+	And StepsContext the password is <password>
+	When StepsContext trigger login
+	Then StepsContext the Message should be <message>
 
 	Examples:
 		| username     | password     | message                                |

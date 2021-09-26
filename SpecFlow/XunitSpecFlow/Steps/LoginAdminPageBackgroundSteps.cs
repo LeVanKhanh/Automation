@@ -9,7 +9,7 @@ namespace XunitSpecFlow.Steps
     {
         private AuthenticationProvider _authenticationProvider { get; set; }
 
-        [Given(@"I access the authentication page")]
+        [Given(@"Background I access the authentication page")]
         public void IAccessTheAuthenticationPage()
         {
             _authenticationProvider = new AuthenticationProvider();

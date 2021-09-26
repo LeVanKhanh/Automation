@@ -19,7 +19,7 @@ namespace XunitSpecFlow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class LoginAdminPageScenarioOutlineFeature : object, Xunit.IClassFixture<LoginAdminPageScenarioOutlineFeature.FixtureData>, System.IDisposable
+    public partial class LoginAdminPageScopedFeature : object, Xunit.IClassFixture<LoginAdminPageScopedFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace XunitSpecFlow.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "AuthenticationScenarioOutline.feature"
+#line 1 "AuthenticationScoped.feature"
 #line hidden
         
-        public LoginAdminPageScenarioOutlineFeature(LoginAdminPageScenarioOutlineFeature.FixtureData fixtureData, XunitSpecFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public LoginAdminPageScopedFeature(LoginAdminPageScopedFeature.FixtureData fixtureData, XunitSpecFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace XunitSpecFlow.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login Admin Page(ScenarioOutline)", "\tWho: Application administrator\r\n\tWhat: Login to admin page\r\n\tWhy: To mange appli" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login Admin Page(Scoped)", "\tWho: Application administrator\r\n\tWhat: Login to admin page\r\n\tWhy: To mange appli" +
                     "cation settings\r\n\t“As a [persona], I [want to], [so that].”\r\n\tAs a application a" +
                     "dministrator, I want to login to admin page, so that I can manage the applicatio" +
                     "n settings", ProgrammingLanguage.CSharp, ((string[])(null)));
@@ -78,13 +78,22 @@ namespace XunitSpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 8
+#line hidden
+#line 9
+ testRunner.Given("I access the authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         void System.IDisposable.Dispose()
         {
             this.TestTearDown();
         }
         
         [Xunit.SkippableTheoryAttribute(DisplayName="Authentication successful")]
-        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(ScenarioOutline)")]
+        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(Scoped)")]
         [Xunit.TraitAttribute("Description", "Authentication successful")]
         [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         [Xunit.InlineDataAttribute("admin", "admin", new string[0])]
@@ -104,7 +113,7 @@ namespace XunitSpecFlow.Features
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Authentication successful", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -124,24 +133,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given(string.Format("ScenarioOutline the username is {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 11
- testRunner.And(string.Format("ScenarioOutline the password is {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.When("ScenarioOutline trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+this.FeatureBackground();
 #line hidden
 #line 13
- testRunner.Then("ScenarioOutline the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("Scoped the username is {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 14
+ testRunner.And(string.Format("Scoped the password is {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+ testRunner.When("Scoped trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 16
+ testRunner.Then("Scoped the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [Xunit.SkippableTheoryAttribute(DisplayName="Authentication failed")]
-        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(ScenarioOutline)")]
+        [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(Scoped)")]
         [Xunit.TraitAttribute("Description", "Authentication failed")]
         [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         [Xunit.InlineDataAttribute("ToNullString", "admin", "The username and password are requied!", new string[0])]
@@ -164,7 +176,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("password", password);
             argumentsOfScenario.Add("message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Authentication failed", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -184,17 +196,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 24
- testRunner.Given(string.Format("ScenarioOutline the username is {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 25
- testRunner.And(string.Format("ScenarioOutline the password is {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
- testRunner.When("ScenarioOutline trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+this.FeatureBackground();
 #line hidden
 #line 27
- testRunner.Then(string.Format("ScenarioOutline the Message should be {0}", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("Scoped the username is {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+ testRunner.And(string.Format("Scoped the password is {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
+ testRunner.When("Scoped trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 30
+ testRunner.Then(string.Format("Scoped the Message should be {0}", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -207,12 +222,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                LoginAdminPageScenarioOutlineFeature.FeatureSetup();
+                LoginAdminPageScopedFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                LoginAdminPageScenarioOutlineFeature.FeatureTearDown();
+                LoginAdminPageScopedFeature.FeatureTearDown();
             }
         }
     }

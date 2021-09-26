@@ -86,12 +86,14 @@ namespace XunitSpecFlow.Features
         [Xunit.SkippableFactAttribute(DisplayName="Authentication successful")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(Table)")]
         [Xunit.TraitAttribute("Description", "Authentication successful")]
+        [Xunit.TraitAttribute("Category", "AuthenticationSuccessful")]
         public virtual void AuthenticationSuccessful()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationSuccessful"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Authentication successful", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -120,13 +122,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "password",
                             "admin"});
-#line 9
+#line 10
  testRunner.Given("Table I have successful authentication with correct account", ((string)(null)), table1, "Given ");
 #line hidden
-#line 13
+#line 14
  testRunner.When("Table trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 15
  testRunner.Then("Table the IsAuthenticated should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -136,12 +138,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Authentication failed with incorrect account")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(Table)")]
         [Xunit.TraitAttribute("Description", "Authentication failed with incorrect account")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         public virtual void AuthenticationFailedWithIncorrectAccount()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Authentication failed with incorrect account", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 16
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -170,13 +174,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "password",
                             "admin"});
-#line 17
+#line 19
  testRunner.Given("Table I have failed authentication with incorrect account", ((string)(null)), table2, "Given ");
 #line hidden
-#line 21
+#line 23
  testRunner.When("Table trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 24
  testRunner.Then("Table the Message should be The username or password is incorrect!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -186,12 +190,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Authentication failed with missing input")]
         [Xunit.TraitAttribute("FeatureTitle", "Login Admin Page(Table)")]
         [Xunit.TraitAttribute("Description", "Authentication failed with missing input")]
+        [Xunit.TraitAttribute("Category", "AuthenticationFailed")]
         public virtual void AuthenticationFailedWithMissingInput()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "AuthenticationFailed"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Authentication failed with missing input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 24
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -220,13 +226,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "password",
                             "admin"});
-#line 25
+#line 28
  testRunner.Given("Table I have failed authentication with missing input", ((string)(null)), table3, "Given ");
 #line hidden
-#line 29
+#line 32
  testRunner.When("Table trigger login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 30
+#line 33
  testRunner.Then("Table the Message should be The username and password are requied!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
