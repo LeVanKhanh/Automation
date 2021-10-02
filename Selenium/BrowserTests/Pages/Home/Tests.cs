@@ -1,22 +1,23 @@
 ﻿using BrowserTests.Common;
 using BrowserTests.Fixtures;
 using BrowserTests.Helper;
-using OpenQA.Selenium;
 using System;
 using Xunit;
 
 namespace BrowserTests.Pages.Home
 {
     [Collection(Constants.FixtureCollection.WebDriverCollection)]
-    public class Tests : IDisposable
+    public class Tests : IClassFixture<Fixture>, IDisposable
     {
-        private readonly IWebDriver _webDriver;
-        private readonly Page _page;
-        public Tests(WebDriverCollectionFixture fixture)
+        private readonly Fixture _fixture;
+        public Tests(ShareCollectionFixture collectionFixture, Fixture classFixture)
         {
             // Arrange
-            _webDriver = fixture.WebDriver;
-            _page = new Page(_webDriver);
+            if(_fixture == null)
+            {
+                _fixture = classFixture;
+                _fixture.Init(collectionFixture.ServiceProvider);
+            }
         }
 
         [Fact]
@@ -24,11 +25,11 @@ namespace BrowserTests.Pages.Home
         public void Load()
         {
             // Arrange
-            _page.NaviageToPage();
+            _fixture.Page.NaviageToPage();
             WaitHelper.Pause();
 
             //Assert
-            Assert.Equal("Home Page - Selenium", _webDriver.Title);
+            Assert.Equal("Home Page - Selenium", _fixture.WebDriver.Title);
         }
 
         [Fact]
@@ -36,16 +37,16 @@ namespace BrowserTests.Pages.Home
         public void GoToPrivacyPage()
         {
             // Arrange
-            _page.NaviageToPage();
+            _fixture.Page.NaviageToPage();
             WaitHelper.Pause();
 
             // Act
             // find a link by link text
-            _page.MenuComponent.GoToPrivacy();
+            _fixture.Page.MenuComponent.GoToPrivacy();
             WaitHelper.Pause();
 
             //Assert
-            Assert.Equal("Privacy Policy - Selenium", _webDriver.Title);
+            Assert.Equal("Privacy Policy - Selenium", _fixture.WebDriver.Title);
         }
 
         [Fact]
@@ -53,15 +54,15 @@ namespace BrowserTests.Pages.Home
         public void GoToNetCore()
         {
             // Arrange
-            _page.NaviageToPage();
+            _fixture.Page.NaviageToPage();
             WaitHelper.Pause();
 
             //Act
-            _page.GoToToNetCore();
+            _fixture.Page.GoToToNetCore();
             WaitHelper.Pause();
 
             //Assert
-            Assert.Equal("ASP.NET documentation | Microsoft Docs", _webDriver.Title);
+            Assert.Equal("ASP.NET documentation | Microsoft Docs", _fixture.WebDriver.Title);
         }
 
         public void Dispose()

@@ -1,14 +1,12 @@
 ﻿using BrowserTests.Helper;
 using OpenQA.Selenium;
-using System;
 using SeleniumExtras.PageObjects;
+using System;
 
 namespace BrowserTests.Common.Pages
 {
-    public abstract class PageObject<TPageObjectModel> : IPageObject<TPageObjectModel>
-         where TPageObjectModel : new()
+    public abstract class PageObject : IPageObject
     {
-        public TPageObjectModel PageObjectModel { get; }
         public string PageTitle { get; }
         public Uri Uri { get; set; }
         protected readonly IWebDriver _webDriver;
@@ -17,8 +15,6 @@ namespace BrowserTests.Common.Pages
             PageTitle = tile;
             Uri = new Uri(url);
             _webDriver = webDriver;
-            PageObjectModel = new TPageObjectModel();
-            PageFactory.InitElements(webDriver, PageObjectModel);
         }
 
         public void NaviageToPage()
@@ -34,6 +30,18 @@ namespace BrowserTests.Common.Pages
         public void EnsurePageLoaded(IWebElement webElement, int timeout = 10)
         {
             WaitHelper.WaitUntilElementClickable(_webDriver, webElement, timeout);
+        }
+    }
+
+    public abstract class PageObject<TPageObjectModel> : PageObject, IPageObject<TPageObjectModel>
+         where TPageObjectModel : new()
+    {
+        public TPageObjectModel PageObjectModel { get; }
+        public PageObject(IWebDriver webDriver, string url, string tile = "")
+            : base(webDriver, url, tile)
+        {
+            PageObjectModel = new TPageObjectModel();
+            PageFactory.InitElements(webDriver, PageObjectModel);
         }
     }
 }
