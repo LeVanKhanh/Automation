@@ -1,19 +1,21 @@
-﻿using BrowserTests.Helper;
+﻿using BrowserTests.Common;
+using BrowserTests.Fixtures;
+using BrowserTests.Helper;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using System;
 using Xunit;
 
 namespace BrowserTests.Pages.Home
 {
+    [Collection(Constants.FixtureCollection.WebDriverCollection)]
     public class Tests : IDisposable
     {
         private readonly IWebDriver _webDriver;
         private readonly Page _page;
-        public Tests()
+        public Tests(WebDriverCollectionFixture fixture)
         {
             // Arrange
-            _webDriver = new ChromeDriver();
+            _webDriver = fixture.WebDriver;
             _page = new Page(_webDriver);
         }
 
@@ -64,7 +66,7 @@ namespace BrowserTests.Pages.Home
 
         public void Dispose()
         {
-            _webDriver.Dispose();
+
         }
     }
 
